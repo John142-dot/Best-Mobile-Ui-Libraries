@@ -1,0 +1,74 @@
+local DarkraiX = loadstring(game:HttpGet("https://raw.githubusercontent.com/John142-dot/madui/main/darkraimod", true))()
+local Library = DarkraiX:Window("Darkrai X", "", "", Enum.KeyCode.RightControl)
+
+-- Create the main tab
+Tab1 = Library:Tab("Main")
+
+-- Button that prints "hi"
+Tab1:Button("Button", function()
+    print("hi")
+end)
+
+-- Toggle that prints the toggle state
+Tab1:Toggle("Toggle", false, function(value)
+    print(value)
+end)
+
+-- Slider that prints the current value
+Tab1:Slider("Slider", 1, 100, 25, function(value)
+    print(value)
+end)
+
+-- Dropdown that prints the selected value
+Tab1:Dropdown("Dropdown", {"yo", "sus", "pro"}, function(value)
+    print(value)
+end)
+
+-- Textbox that prints the input value
+Tab1:Textbox("Textbox", "", true, function(value)
+    print(value)
+end)
+
+-- Separator for visual organization
+Tab1:Seperator("Seperator")
+Tab1:Line()
+
+-- Additional Buttons
+Tab1:Button("New Button 1", function()
+    print("New Button 1 clicked")
+end)
+
+Tab1:Button("New Button 2", function()
+    print("New Button 2 clicked")
+end)
+
+Tab1:Button("New Button 3", function()
+    print("New Button 3 clicked")
+end)
+
+Tab1:Button("New Button 4", function()
+    print("New Button 4 clicked")
+end)
+
+Tab1:Button("New Button 5", function()
+    print("New Button 5 clicked")
+end)
+
+-- Another Toggle for demonstration
+Tab1:Toggle("Another Toggle", false, function(value)
+    print("Another Toggle is now: " .. tostring(value))
+end)
+
+-- Another Slider
+Tab1:Slider("Another Slider", 0, 50, 10, function(value)
+    print("Slider value: " .. value)
+end)
+
+-- Another Dropdown
+Tab1:Dropdown("Another Dropdown", {"option1", "option2", "option3"}, function(value)
+    print("Selected: " .. value)
+end)
+
+-- Final Separator and Line
+Tab1:Seperator("Final Seperator")
+Tab1:Line()
